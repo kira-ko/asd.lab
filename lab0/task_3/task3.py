@@ -1,20 +1,15 @@
-
-
-
-
-def fib2():
-    f = open("input.txt", "r")
+with open("input.txt", 'r') as f:
     n = int(f.readline())
-    f.close()
-    if n < 2:
-        return n
+f.close()
+
+with open("output.txt", "w") as f:
+    if n <= 1:
+        f.write(str(n))
     else:
         a, b = 0, 1
+        s = 0
         for i in range(1, n):
-            a, b = b, (a + b) % 10
-        f = open("output.txt", "w")
-        f.write(str(b))
-        f.close()
-
-
-fib2()
+            s = (a+b)%10
+            a, b = b, s
+        f.write(str(s))
+f.close()
