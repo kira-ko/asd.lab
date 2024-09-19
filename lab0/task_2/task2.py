@@ -1,8 +1,3 @@
-import time
-
-st_time = time.perf_counter()
-
-
 with open("input.txt", "r") as f:
     n = int(f.readline())
 f.close()
@@ -16,5 +11,3 @@ with open("output.txt", "w") as f:
             a.append((a[i-1] + a[i]))
         print(*a)
         f.write(str(a[n]))
-
-print("Время работы: %s секунд " % (time.perf_counter() - st_time))
