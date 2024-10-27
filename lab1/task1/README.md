@@ -30,7 +30,7 @@
 
 Код задачи:
 ---------
-`
+```
 '''Задание 1. Сортировка вставкой'''
 def insertion_sort(arr):
     for i in range(1, len(arr)):
@@ -49,4 +49,4 @@ if __name__ == '__main__':
     array = insertion_sort(list(map(int, massive.split())))
     with open('output.txt', 'w') as f:
         print(' '.join(list(map(str, array))), file=f)
-`
+```
