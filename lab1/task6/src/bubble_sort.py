@@ -1,3 +1,4 @@
+'''Задание 6. Пузырьковая сортировка.'''
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):

@@ -1,3 +1,4 @@
+"""Задание 2. Сортировка вставкой +"""
 def insertion_sort(list_arr):
     index_result = [1]
     for i in range(1, len(list_arr)):
