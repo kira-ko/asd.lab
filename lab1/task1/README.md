@@ -50,3 +50,29 @@ if __name__ == '__main__':
     with open('output.txt', 'w') as f:
         print(' '.join(list(map(str, array))), file=f)
 ```
+
+Запуск проекта
+--------
+1. перейдите в директорию src
+2. вставте корректные данные в файл input.txt (или убедитесь что он содержит корректные данные)
+3. запустите скрипт ```python isertion_sort.py```
+4. результат выполнения кода будет в файле output.txt
+
+Тестирование
+----------
+для проверки работы алгоритма выполняються тесты, находящиеся в директории tests в файле insertion_sort_test
+
+```
+import unittest
+
+from lab1.task1.src.isertion_sort import insertion_sort
+
+class TestInsertionSort(unittest.TestCase):
+    def test_insertion_sort(self):
+        self.assertEqual(insertion_sort([31, 41, 59, 26, 41, 58]), [26, 31, 41, 41, 58, 59])
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+
