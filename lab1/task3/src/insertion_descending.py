@@ -1,3 +1,4 @@
+"""Задание 3. Сортировка вставкой по убыванию."""
 def insertion_descending(arr):
     for i in range(1, len(arr)):
         key = arr[i]
