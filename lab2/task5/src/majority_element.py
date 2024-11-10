@@ -1,3 +1,5 @@
+from lab2.utils import open_file, write_file
+
 def majority(a):
     dic = {}
     for i in a:
@@ -11,10 +13,8 @@ def majority(a):
 
 
 if __name__ == '__main__':
-    with open('../txtf/output.txt', 'w') as f:
-        file = open('../txtf/input.txt')
+    n_str, m = open_file("../txtf/input.txt")
+    n = int(n_str[0])
+    ans = majority(m)
+    write_file(ans, "../txtf/output.txt")
 
-        n = int(file.readline())
-        list_input = list(map(int, file.readline().split()))
-
-        f.write(str(majority(list_input)))

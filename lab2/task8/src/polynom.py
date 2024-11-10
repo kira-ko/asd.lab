@@ -1,3 +1,5 @@
+from lab2.utils import open_file, write_file
+
 def multiplication_polynomials(a, b, n):
     result = [0] * (n + n - 1)
     for cof_a in range(n):
@@ -7,9 +9,9 @@ def multiplication_polynomials(a, b, n):
 
 
 if __name__ == '__main__':
-    with open('../txtf/output.txt', 'w') as f:
-        file = open('../txtf/input.txt')
-        n = int(file.readline())
-        a, b = list(map(int, file.readline().split())), list(map(int, file.readline().split()))
-        f.write(' '.join(map(str, multiplication_polynomials(a, b, n))))
+    a, b = open_file("../txtf/input.txt")
+    n = a[0]
+    a = a[1:]
 
+    ans = multiplication_polynomials(a, b, n)
+    write_file(ans, "../txtf/output.txt")
