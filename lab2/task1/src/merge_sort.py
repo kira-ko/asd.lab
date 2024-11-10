@@ -1,4 +1,7 @@
 '''Сортировка слиянием'''
+from lab2.utils import open_file, write_file
+
+
 def merge_sort(array):
     if len(array) > 1:
         mid = len(array) // 2
@@ -28,9 +31,10 @@ def merge_sort(array):
     return array
 
 if __name__ == '__main__':
-    with open('output.txt', 'w') as f:
-        file = open('input.txt')
-        n = int(file.readline())
-        array = list(map(int, file.readline().split()))
+    n_str, m = open_file("../txtf/input.txt")
+    n = int(n_str[0])
+    ans = merge_sort(m)
+    write_file(ans,"../txtf/output.txt" )
 
-        f.write(' '.join(map(str, merge_sort(array))))
+
+

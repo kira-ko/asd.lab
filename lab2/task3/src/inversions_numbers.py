@@ -1,3 +1,6 @@
+'''Число инверсий'''
+from lab2.utils import open_file, write_file
+
 def inv_count(array, copy_array, left, middle, right):
     i = left
     j = middle + 1
@@ -46,9 +49,9 @@ def inversions_numbers(array, copy_array, left, right):
 
 
 if __name__ == '__main__':
-    with open('output.txt', 'w') as f:
-        file = open('input.txt')
-        n = int(file.readline())
-        massive = list(map(int, file.readline().split()))
-        massive_copy = massive.copy()
-        f.write(str(inversions_numbers(massive, massive_copy, 0, n-1)))
+    n_str, massive = open_file("../txtf/input.txt")
+    n = int(n_str[0])
+    massive_copy = massive.copy()
+    ans = inversions_numbers(massive, massive_copy, 0, n-1)
+    write_file(ans, "../txtf/output.txt")
+

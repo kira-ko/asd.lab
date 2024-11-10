@@ -7,8 +7,8 @@ def multiplication_polynomials(a, b, n):
 
 
 if __name__ == '__main__':
-    with open('output.txt', 'w') as f:
-        file = open('input.txt')
+    with open('../txtf/output.txt', 'w') as f:
+        file = open('../txtf/input.txt')
         n = int(file.readline())
         a, b = list(map(int, file.readline().split())), list(map(int, file.readline().split()))
         f.write(' '.join(map(str, multiplication_polynomials(a, b, n))))

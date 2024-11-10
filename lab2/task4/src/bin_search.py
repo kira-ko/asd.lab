@@ -1,26 +1,32 @@
-def binary_search(array, whatfind):
-    l = 0
-    r = len(array) - 1
+'''Бинарный поиск'''
+from lab2.utils import open_file, write_file
 
-    while l <= r:
-        middle = (l + r) // 2
-        if array[middle] == whatfind:
-            return middle
-        elif array[middle] < whatfind:
-            l = middle + 1
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
         else:
-            r = middle - 1
+            right = mid - 1
     return -1
-
-def func(mas, maas_find):
-    return [binary_search(mas, maas_find[i]) for i in range(len(maas_find))]
 
 
 
 if __name__ == '__main__':
-    file = open('input.txt')
-    n, mass = int(file.readline()), list(map(int, file.readline().split()))
-    k, mass_f = int(file.readline()), list(map(int, file.readline().split()))
 
-    with open('output.txt', 'w') as f:
-        f.write(' '.join(map(str, func(mass, mass_f))))
+    data_n, data_k = open_file("../txtf/input.txt")
+    n = int(data_n[0])
+    mass = data_n[1:]
+
+    k = int(data_k[0])
+    mass_f = data_k[1:]
+
+    write_file("", "../txtf/output.txt", mode="w")
+    for i in mass_f:
+        ans = binary_search(mass, i)
+        write_file(f"{ans} ", "../txtf/output.txt", mode='a')
+
+
