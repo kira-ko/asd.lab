@@ -3,7 +3,7 @@ Cтудентка ИТМО, Коновалова Кира Романовна, 47
 
 Вариант 9
 
-## Задание 2:
+## Задание 3:
 ![image](https://github.com/user-attachments/assets/771cf5a9-33ea-446f-b450-aedee7ef6a19)
 
 
