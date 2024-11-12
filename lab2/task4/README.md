@@ -1,24 +1,20 @@
-# Задание №5 по выбору :  Представитель большинства
+# Задание №4 по выбору :  Бинарный поиск
 Cтудентка ИТМО, Коновалова Кира Романовна, 472066
 
 Вариант 9
 
 ## Задание 2:
-![image](https://github.com/user-attachments/assets/03dd711b-cbc1-4f61-af93-ad70940ad1a4)
-
+![image](https://github.com/user-attachments/assets/577cfd95-4db3-4041-9475-d1fe41c0e18d)
 
 
 ## Input / Output 
 
 | Input    | Output |
 |----------|----------|
-| 5       |  |
-| 2 3 9 2 2  |  1 |
-
-| Input    | Output |
-|----------|----------|
-| 4 | |
-|  1 2 3 4 | 0 |
+| 5       | 2 0 -1 0 -1 |
+| 1 5 8 12 13  | |
+| 5 | |
+|  8 1 23 1 11 |  |
 
 
 ## Ограничения по времени и памяти
@@ -28,7 +24,7 @@ Cтудентка ИТМО, Коновалова Кира Романовна, 47
 
 ## Структура проекта:
 
-* task5/ - папка со всеми файлами для задачи
+* task4/ - папка со всеми файлами для задачи
 * src/ - исходный код программы
 * tests/ - тестирование алгоритма
 * txtf / - текстовые файлы с входными и выходными данными
@@ -40,21 +36,21 @@ Cтудентка ИТМО, Коновалова Кира Романовна, 47
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd asd.lab/lab2/task5
+   cd asd.lab/lab2/task4
    ```
 3. Запустите программу:
    ```bash
-   python src/majority_element.py
+   python src/bin_search.py
    ```
 
 4. Запуск тестов:
    ```bash
-   python tests/majority_element_test.py
+   python tests/bin_search_test.py
    ```
 
 ## Тестирование
 Для запуска тестов выполните:
 ```bash
-    pytest tests/majority_element_test.py
+    pytest tests/bin_search_test.py
 ```
 
